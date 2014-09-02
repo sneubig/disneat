@@ -4,8 +4,10 @@
 <h1> Restaurants </h1>
 
 <ul>
-	<% @restaurants.each do |restaurant| %>
-		<li><%= restaurant.name %> : serves alcohol?
-		<%= restaurant.serves_alcohol %></li>
+	<% @user.food_recommendations.each do |restaurant| %>
+		<li>
+			<%= restaurant.name %> : serves alcohol?
+			<%= restaurant.serves_alcohol %>
+		</li>
 	<% end %>
 </ul>
